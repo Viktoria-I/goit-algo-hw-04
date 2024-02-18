@@ -47,20 +47,14 @@ def show_phone(args, contacts):
 def show_all(contacts):
 
     if not contacts:
-        print("You don't have any contacts.")
-        print()
+        return "You don't have any contacts."
+        
 
     for name, phone in contacts.items():
-        print("Your contacts:")
-        print(f"{name}: {phone}")
-        print()
+        return f"Your contacts: \n{name}: {phone}\n"
 
 
 def helper():
     
-    print("Available commands:")
-    print("add <name> <phone>: add a new contact")
-    print("change <name> <phone>: change the phone number of a contact")
-    print("phone <name>: show the phone number of a contact")
-    print("all: show all contacts")
-    print("exit or close: close the program")
+    return "Available commands:\nadd <name> <phone>: add a new contact\nchange <name> <phone>: change the phone number of a contact\nphone <name>: show the phone number of a contact\nall: show all contacts\nexit or close: close the program"
+

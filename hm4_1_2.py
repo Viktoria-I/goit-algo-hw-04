@@ -33,7 +33,7 @@ def get_cats_info(path):
             for line in lines:
                 cat_info = {}
                 id, name, age = line.split(',')
-                cat_info = {'id': id, 'name': name, 'age': str(int(age))}
+                cat_info = {'id': id, 'name': name, 'age': str(age).strip()}
                 cats_info.append(cat_info)
 
             return cats_info
@@ -44,3 +44,5 @@ def get_cats_info(path):
     except UnicodeDecodeError as e:
         print(f"Decoding Error: {e}")
 
+cats_info = get_cats_info("E:\Python\cats.txt")
+print(cats_info)
