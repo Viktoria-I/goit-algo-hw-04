@@ -43,6 +43,4 @@ def get_cats_info(path):
     
     except UnicodeDecodeError as e:
         print(f"Decoding Error: {e}")
-
-cats_info = get_cats_info("E:\Python\cats.txt")
-print(cats_info)
+        
